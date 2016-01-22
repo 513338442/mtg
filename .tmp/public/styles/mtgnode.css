@@ -1,0 +1,369 @@
+/*
+| -------------------------------------------------------------------
+|  MTG Node LESS StyleSheet
+| -------------------------------------------------------------------
+|
+|
+|   Author : Yomguithereal
+|   Version : 1.0
+*/
+/*
+| -------------------------------------------------------------------
+|  MTG Node LESS Mixins
+| -------------------------------------------------------------------
+|
+|
+|   Author : Yomguithereal
+|   Version : 1.0
+*/
+/*
+| -------------------------------------------------------------------
+|  MTG Node LESS Constants
+| -------------------------------------------------------------------
+|
+|
+|   Author : Yomguithereal
+|   Version : 1.0
+*/
+/*
+| -------------------------------------------------------------------
+|  MTG Node LESS Layout
+| -------------------------------------------------------------------
+|
+|
+|   Author : Yomguithereal
+|   Version : 1.0
+*/
+BODY {
+  margin: 0px;
+}
+#mainframe {
+  margin: 0px auto;
+  margin-top: 10px;
+  padding: 0px;
+  width: 1289px;
+  min-height: 760px;
+}
+#helper_block {
+  width: 250px;
+  margin: 0px;
+  height: 760px;
+  float: left;
+  border: 1px solid black;
+  border-right: none;
+}
+#top_helper_block,
+#bottom_helper_block {
+  height: 200px;
+}
+#top_helper_block {
+  border-bottom: 1px solid black;
+}
+#bottom_helper_block {
+  border-top: 1px solid black;
+}
+#card_viewer_block {
+  height: 348px;
+}
+#deck_builder_container {
+  width: 1039px;
+  margin: 0px;
+  height: 760px;
+  float: right;
+  border: 1px solid black;
+}
+#left_panel {
+  border-right: 1px solid black;
+  float: left;
+  width: 517px;
+  height: 100%;
+  overflow-y: scroll;
+}
+#right_panel {
+  float: right;
+  width: 517px;
+  height: 100%;
+  text-align: left;
+  overflow-y: scroll;
+}
+#game_block {
+  width: 974px;
+  margin-left: 250px;
+  height: 760px;
+  border: 1px solid black;
+}
+.game-area {
+  position: relative;
+}
+#top_game_block {
+  height: 380px;
+  position: relative;
+}
+#bottom_game_block {
+  height: 379px;
+  border-top: 1px solid black;
+  position: relative;
+}
+#top_game_block.opponent,
+#bottom_game_block.opponent {
+  background-color: #cccccc;
+}
+.library-and-hand {
+  position: absolute;
+  width: 974px;
+  height: 111px;
+}
+.library-and-hand.top {
+  top: 0px;
+  border-bottom: 1px solid black;
+}
+.library-and-hand.bottom {
+  bottom: 0px;
+  border-top: 1px solid black;
+}
+.hand-emplacement {
+  height: 111px;
+  width: 737px;
+  position: absolute;
+  left: 237px;
+}
+.exile-emplacement {
+  width: 78px;
+  height: 111px;
+  position: absolute;
+  left: 0px;
+}
+.exile-emplacement.top {
+  border-right: 1px solid black;
+}
+.exile-emplacement.bottom {
+  bottom: 0px;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+.library-emplacement {
+  width: 78px;
+  height: 111px;
+  position: absolute;
+  left: 158px;
+}
+.library-emplacement.top {
+  border-right: 1px solid black;
+}
+.library-emplacement.bottom {
+  bottom: 0px;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+.graveyard-emplacement {
+  width: 78px;
+  height: 111px;
+  position: absolute;
+  left: 79px;
+}
+.graveyard-emplacement.top {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.graveyard-emplacement.bottom {
+  bottom: 0px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+.game-emplacement {
+  height: 268px;
+  width: 974px;
+  position: absolute;
+  z-index: 10;
+}
+#top_game_zone {
+  bottom: 0px;
+}
+.context-menu {
+  position: absolute;
+  display: none;
+  z-index: 1038;
+}
+.modal-body-search {
+  height: 500px;
+  overflow-y: scroll;
+  text-align: center;
+}
+.card-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.valid {
+  color: green;
+}
+.error {
+  color: red;
+}
+#chat_container {
+  position: absolute;
+  z-index: 1039;
+}
+#chat_container > .modal-content {
+  width: 300px;
+  height: 230px;
+  cursor: pointer;
+}
+#chat_messages {
+  height: 130px;
+  overflow-y: scroll;
+  font-size: 12px;
+}
+#deck_to_parse {
+  height: 400px;
+}
+/*
+| -------------------------------------------------------------------
+|  MTG Node LESS Cards
+| -------------------------------------------------------------------
+|
+|
+|   Author : Yomguithereal
+|   Version : 1.0
+*/
+.card-min {
+  width: 78px;
+  height: 111px;
+  cursor: pointer;
+  z-index: 40;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+  -o-perspective: 1000;
+  -ms-perspective: 1000;
+}
+.card-min.tapped {
+  -webkit-transform: rotate(90deg) scale(1) translate3d(0, 0, 0);
+  -moz-transform: rotate(90deg) scale(1) translate3d(0, 0, 0);
+  -o-transform: rotate(90deg) scale(1) translate3d(0, 0, 0);
+  -ms-transform: rotate(90deg) scale(1) translate3d(0, 0, 0);
+  transform: rotate(90deg) scale(1) translate3d(0, 0, 0);
+}
+.card-min.in-library {
+  top: 0px;
+}
+.card-min.in-game {
+  -webkit-box-shadow: rgba(100, 100, 100, 0.298039) 0px 2px 6px 0px;
+  -moz-box-shadow: rgba(100, 100, 100, 0.298039) 0px 2px 6px 0px;
+  box-shadow: rgba(100, 100, 100, 0.298039) 0px 2px 6px 0px;
+}
+.card-min.deck-builder {
+  position: relative;
+}
+.card-min.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.card-min-deckbuilder {
+  width: 78px;
+  height: 111px;
+  cursor: pointer;
+}
+.card-search {
+  width: 78px;
+  height: 111px;
+  cursor: pointer;
+  margin: 8px;
+  border: 2px solid transparent;
+}
+.card-search.selected {
+  border: 2px solid blue;
+}
+.front-side,
+.back-side {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  display: block;
+}
+.front-side.my,
+.back-side.my {
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+.front-side.op,
+.back-side.op {
+  -webkit-transform: translateZ(0px) rotateZ(180deg);
+  -moz-transform: translateZ(0px) rotateZ(180deg);
+  -o-transform: translateZ(0px) rotateZ(180deg);
+  -ms-transform: translateZ(0px) rotateZ(180deg);
+  transform: translateZ(0px) rotateZ(180deg);
+}
+.back-side {
+  border: 1px solid black;
+}
+.back-side.my {
+  -webkit-transform: rotateY(180deg) translateZ(1px);
+  -moz-transform: rotateY(180deg) translateZ(1px);
+  -o-transform: rotateY(180deg) translateZ(1px);
+  -ms-transform: rotateY(180deg) translateZ(1px);
+  transform: rotateY(180deg) translateZ(1px);
+}
+.back-side.op {
+  -webkit-transform: rotateY(180deg) translateZ(1px) rotateZ(180deg);
+  -moz-transform: rotateY(180deg) translateZ(1px) rotateZ(180deg);
+  -o-transform: rotateY(180deg) translateZ(1px) rotateZ(180deg);
+  -ms-transform: rotateY(180deg) translateZ(1px) rotateZ(180deg);
+  transform: rotateY(180deg) translateZ(1px) rotateZ(180deg);
+}
+.front-side {
+  margin-top: -112px;
+  margin-left: 1px;
+}
+.card-min img {
+  width: 78px;
+  height: 111px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.card-dummy {
+  z-index: 1037;
+}
+.card-min-deckbuilder.card-search.selected {
+  border: 2px solid blue;
+}
+#card_viewer_widget {
+  width: 250px;
+  height: 348px;
+}
+/*
+| -------------------------------------------------------------------
+|  MTG Node LESS Cards
+| -------------------------------------------------------------------
+|
+|
+|   Author : Yomguithereal
+|   Version : 1.0
+*/
+.counter {
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border: 1px solid black;
+  height: 10px;
+  width: 10px;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "handlebars",
+  "version": "2.0.0-alpha.1",
+  "main": "handlebars.js",
+  "dependencies": {},
+  "homepage": "https://github.com/components/handlebars.js",
+  "_release": "2.0.0-alpha.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.0-alpha.1",
+    "commit": "031a1121680db5fb99f1dd52623d9f2abe0c4127"
+  },
+  "_source": "git://github.com/components/handlebars.js.git",
+  "_target": "2.0.0-alpha.1",
+  "_originalSource": "handlebars"
+}
