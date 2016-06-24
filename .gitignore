@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+/NodeJsApplication/nbproject/private/
+/nbproject/private/
+/node_modules/
+/assets/js/bower/

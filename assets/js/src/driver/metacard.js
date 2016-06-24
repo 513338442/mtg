@@ -12,7 +12,7 @@
 
   // Properties
   //------------
-  var baseUrl = 'http://localhost/home/meta-images/';
+  var baseUrl = '../../images/';
 
   // Driver
   //--------
